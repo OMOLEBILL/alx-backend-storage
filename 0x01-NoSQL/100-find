@@ -1,0 +1,2 @@
+// why are yu running from regex
+db.school.find({name : {"$regex": "^Holberton"}})
