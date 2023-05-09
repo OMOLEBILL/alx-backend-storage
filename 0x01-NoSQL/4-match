@@ -1,0 +1,2 @@
+// its time for some matches
+db.school.aggregate([{$match : {"name" : "Holberton school" }}])
