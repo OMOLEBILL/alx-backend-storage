@@ -6,6 +6,7 @@ from typing import Union
 
 
 class Cache():
+    """ cache class for reddis """
     def __init__(self):
         """ We initaliaze the instances of the class """
         self._redis = redis.Redis()
