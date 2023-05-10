@@ -10,7 +10,7 @@ class Cache():
     def __init__(self):
         """ We initaliaze the instances of the class """
         self._redis = redis.Redis()
-        self._redis.flushdb
+        self._redis.flushdb()
 
     def store(self, data: Union[str, bytes, float, int]) -> str:
         """ We generate a random key to store the data """
