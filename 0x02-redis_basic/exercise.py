@@ -19,7 +19,7 @@ class Cache():
         self._redis.set(Id, data)
         return Id
 
-    def get(self, key: str, fn: Optional[Callable]
+    def get(self, key: str, fn: Optional[Callable] = None
             ) -> Union[str, bytes, int, float]:
         """ we decode the value of the given key """
         val = self._redis.get(key)
