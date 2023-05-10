@@ -13,6 +13,6 @@ class Cache():
 
     def store(self, data: Union[str, bytes, float, int]) -> str:
         """ We generate a random key to store the data """
-        Id = uuid.uuid4()
-        self._redis.mset({str(Id): data})
-        return str(Id)
+        Id = str(uuid.uuid4())
+        self._redis.set(Id, data)
+        return Id
