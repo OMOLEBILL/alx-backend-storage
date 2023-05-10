@@ -40,7 +40,7 @@ def replay(fn: Callable) -> None:
         Calls = Calls.decode('utf-8')
     except Exception:
         Calls = 0
-    print(f'{key} was called {Calls} times')
+    print(f'{key} was called {Calls} times:')
     inputs = Redis.lrange(key + ":inputs", 0, -1)
     outputs = Redis.lrange(key + ":outputs", 0, -1)
     for x, y in zip(inputs, outputs):
